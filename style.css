@@ -1,0 +1,154 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+    text-align: center;
+    min-height: 100vh;
+    background: url(./images/bmiimage.jpg) no-repeat center center;
+    background-size: cover;
+    background-attachment: fixed;
+    user-select: none;
+}
+
+.wrapper {
+    width: 500px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgb(250, 234, 249);
+    opacity: 0.8;
+    border-radius: 16px;
+    padding: 50px 20px;
+    box-shadow: 20px 50px 20px rgb(149, 147, 147);
+}
+
+h2 {
+    font-size: 30px;
+}
+
+.input {
+    text-align: left;
+    margin-left: 120px;
+    font-weight: bolder;
+}
+
+#height,
+#weight {
+    color: black;
+    font-size: 20px;
+    font-weight: 200;
+    outline: none;
+    background: none;
+    width: 200px;
+}
+
+#weight:focus,
+#height:focus {
+    border-bottom: 2px solid;
+    width: 250px;
+    transition: 0.5s;
+}
+
+#output {
+    color: brown;
+    font-weight: bolder;
+    font-size: 19px;
+}
+
+#btn {
+    margin-top: 10px;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    color: white;
+    background-color: black;
+    border-radius: 10px;
+    width: 150px;
+    padding: 10px;
+    box-shadow: 2px 5px 2px rgb(171, 166, 166);
+}
+
+#btn:active {
+    background-color: white;
+    color: black;
+    box-shadow: 0 5px black;
+    transform: translateY(5px);
+}
+
+.loader {
+    margin-top: 12px;
+    display: none;
+    background-color: transparent;
+    mix-blend-mode: multiply;
+}
+
+/* Media Query for devices with max width of 768px (e.g., tablets) */
+@media screen and (max-width: 768px) {
+    .wrapper {
+        width: 80%;
+        padding: 20px;
+    }
+
+    h2 {
+        font-size: 22px;
+    }
+
+    .input {
+        margin-left: 5%;
+    }
+
+    #height,
+    #weight {
+        font-size: 18px;
+    }
+
+    #btn {
+        width: 70%;
+    }
+
+    body {
+        background-size: cover;
+        background-position: center;
+    }
+}
+
+/* Media Query for devices with max width of 480px (e.g., smartphones) */
+@media screen and (max-width: 480px) {
+    .wrapper {
+        width: 95%;
+        padding: 15px;
+    }
+
+    h2 {
+        font-size: 20px;
+    }
+
+    .input {
+        margin-left: 5%;
+    }
+
+    #height,
+    #weight {
+        font-size: 16px;
+    }
+
+    #btn {
+        width: 80%;
+    }
+
+    body {
+        background-size: cover;
+        background-position: top center;
+    }
+}
+
+/* Media Query for desktop view (min-width of 769px) */
+@media screen and (min-width: 769px) {
+    body {
+        background: url(./images/banner.png) no-repeat center center;
+        /* Different background image for desktop */
+        background-size: cover;
+        background-attachment: fixed;
+    }
+}
